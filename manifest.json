@@ -1,5 +1,5 @@
 {
-    "name": "Online maze game!",
+    "name": "T-Maze",
     "short_name": "Online maze!",
     "start_url": "/",
     "theme_color": "#fff",
@@ -7,7 +7,7 @@
     "description": "An online multiplayer randomly generated maze game! Race against others to see who can finish first.",
     "orientation": "portrait",
     "display": "standalone",
-    "categories": ["online game", "maze", "maze game", "online maze game"],
+    "categories": ["online game", "maze", "maze game", "online maze game", "tintel games"],
     "icons": [
         {
             "src": "icon.png",

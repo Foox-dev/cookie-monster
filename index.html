@@ -4,42 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maze Game</title>
+    <title>T-Maze</title>
+    <link rel="stylesheet" href="style.css">
     <script src = "socket.io.js"></script>
-    <link rel="stylesheet" media="screen and (min-height: 700px)" href="style.css">
-    <link rel="stylesheet" media="screen and (max-height: 700px)" href="height.css">
-    <link rel="stylesheet" media="screen and (max-height: 500px)" href="height2.css">
-    <link rel="stylesheet" media="screen and (min-width: 915px)" href="style.css">
-    <link rel="stylesheet" media="screen and (max-width: 915px)" href="height.css">
-    <link rel="stylesheet" media="screen and (max-width: 760px)" href="height2.css">
-    <style>
-        canvas {
-            border: 2px solid black;
-        }
-    </style>
 </head>
 <body>
     <div style="display: flex; flex-direction: row;" id = "container">
-        <div>
-            <canvas id = "canvas" width="600" ; height="600"></canvas>
-            <br>
-            <button onclick='connection.emit("dir", "up")'>Up</button>
-            <button onclick='connection.emit("dir", "down")'>Down</button>
-            <button onclick='connection.emit("dir", "left")'>Left</button>
-            <button onclick='connection.emit("dir", "right")'>Right</button>
-            <div style = "float: right;">
-                <input type="text" placeholder="Set your username" id = "input">
-                <button onclick='connection.emit("name-change", document.getElementById("input").value)'>Set</button>
+        <div id="game-container">
+            <div id="canvasesContainer">
+              
+              <canvas  id="canvas" width="600" height="600">
+                
+              </canvas>
+              
+                <div id="popupWon">
+                    <p id="popupWonTitle">
+                        
+                    </p>
+                    <p id="popupWonText">
+                        
+                    </p>
+                    <p id="popupWonCountdown">
+                        Game starting in <span id="popupWonCountdownSeconds">5</span>
+                    </p>
+                </div>
+            </div>
+          <!--do not delete named from here-->
+            <p id =  "supersecretmessage">Psst... DM qa#1337, IMPixel#3007 on discord for suggestions, bugs, and improvements</p>
+          <!--don't remove my name form here-->
+        </div>
+        <div id="message-container">
+            <div id="changeUsername">
+                <input type="text" placeholder="Set your username" id="editUsernameInput" autocomplete="off">
+                <button class="editUsernameButton" id="editUsernameButton">
+                    <img src="editIcon.svg" id="editUsernameIcon">
+                </button>
+            </div>
+            <div id="messages">
+                
+            </div>
+            <div id="messageUiContainer">
+                <input class="messagesender" type="text" placeholder="Say something!" id = "text" autocomplete="off">
+                <button id="send">
+                    <img src="sendIcon.svg">
+                </button>
             </div>
         </div>
-        <div>
-            <div id = "messages">
-                <h1>Chat Room</h1>
+    </div>
+    <div id="popupOverlay">
+        <div id="popup">
+            <div id="popupTitle">
+                <span class="special"></span>
             </div>
-            <input type="text" placeholder="Say something!" id = "text">
+            <div id="popupParagraph">
+            </div>
+            <div id="popupButtonsContainer">
+    
+            </div>
         </div>
     </div>
 </body>
 <script src = "script.js"></script>
-<script src="render.js"></script>
+</html>
+</body>
 </html>

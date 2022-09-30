@@ -1,4 +1,4 @@
-# Maze Game
+# T Maze
 
 Server was deployed on heroku.
 This is an online multiplayer maze game where you race against your opponent(s).
